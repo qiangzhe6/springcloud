@@ -1,0 +1,18 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.jws.soap.SOAPBinding;
+
+@RestController
+public class UserController {
+    @Autowired
+    private UserRepository userRepository;
+    @GetMapping("/{id}")
+    private User findById(@PathVariable Long id){
+        User findOne=this.userRepository.findOne(id);
+        return findOne;
+    }
+}
