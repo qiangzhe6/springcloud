@@ -1,3 +1,5 @@
+package cloud;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -75,3 +77,4 @@ public class User {
                 '}';
     }
 }
+
